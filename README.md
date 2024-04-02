@@ -5,17 +5,17 @@ write learning here
 - setup prisma 
 
 
-*** docker commands
+## docker commands
 - docker ps  - to check all running containers
 - docker exec -it <docker_id> bash - to enter into container
 
 
 
-*** linux or bash commands 
+## linux or bash commands 
 - su <user_name>  - to checkout to super user
 - psql - to enter into postgress cmd tool
 
-*** postgress commands
+## postgress commands
 - \l - to list oput all dbs
 - \c <db_name> - to connect with database
 - \d  -  list of all tables or relations
