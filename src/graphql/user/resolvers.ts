@@ -4,8 +4,15 @@ import UserService, { CreateUserPayload, getUserTokenPayload } from '../../servi
 const queries = {
     getUserToken: async (_:any, payload: getUserTokenPayload) => {
         const token = UserService.getUserToken(payload)
-        
         return token;
+    },
+    getCurrentLoggedInUser: async (_:any, parameters:any, context: any ) => {
+        // console.log({context})
+        if(context && context.user) {
+            const id = context.user.id
+            const user = await UserService.getUserByID(id)
+            return user
+        }
     }
 }
 const mutations = {

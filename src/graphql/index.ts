@@ -12,6 +12,7 @@ async function createApolloGraphqlServer() {
             }
         },
         typeDefs: `
+            ${User.typeDefs}
             type Query {
                 ${User.queries}
             }
